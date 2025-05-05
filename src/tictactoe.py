@@ -1,12 +1,12 @@
 import numpy as np
 import pickle
-from flask import Flask
+# from flask import Flask
 
 BOARD_ROWS = 3
 BOARD_COLS = 3
 
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 class State:
     def __init__(self, p1, p2):
@@ -271,9 +271,9 @@ class HumanPlayer:
         pass
 
 
-if __name__ == "__main__":
+
     # training
-    p1 = Player("p1")
+    # p1 = Player("p1")
     # p2 = Player("p2")
 
     # st = State(p1, p2)
@@ -282,11 +282,3 @@ if __name__ == "__main__":
     # p1.savePolicy()
 
     # play with human
-    p1 = Player("computer", exp_rate=0)
-    
-    p1.loadPolicy("policy_p1")
-
-    p2 = HumanPlayer("human")
-
-    st = State(p1, p2)
-    st.play2()
